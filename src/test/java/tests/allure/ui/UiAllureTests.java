@@ -23,7 +23,7 @@ public class UiAllureTests extends UiTestBase {
     @Owner("толстов вадим")
     @DisplayName("Создаем проект")
     public void createProject() {
-        String newProject = dataGenerator.getRandomSentence(3);
+        String newProject = dataGenerator.getRandomSentence(1);
 
         userAuthorization.authorizationUi();
 
