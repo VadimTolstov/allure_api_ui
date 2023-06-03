@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7f3384c6-2de6-4f44-9c5e-277d3b2534b7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/Proect.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/authorization/AuthorizationApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/authorization/AuthorizationResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/endpoint/AuthEndPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/endpoint/TestCaseEndPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/models/CreateTestCaseBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/models/CreateTestCaseRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/models/CreateTestCaseResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/models/DescriptionTestCaseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/models/TestCaseCommentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/models/TestCaseDataResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/models/TestCaseScenarioDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/models/TestCaseTagRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/models/TestCaseTagResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/models/specs/Specs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/pages/ApiVerify.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/pages/TestCaseApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/api/pages/specs/BaseApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/config/Auth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/config/AuthConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/config/Project.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/config/ProjectConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/data/DataGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/drivers/WebDriverProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/ApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/Attachments.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/CustomAllureListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/LoginExtension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/Regress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/Web.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/helpers/WithLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/AuthorizationUi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectPagesModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectsPagesModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/TestCasePagesModal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/TestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/allure/api/ApiAllureTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/allure/api/ApiTestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/allure/ui/UiAllureTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/allure/ui/UiTestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/attachment.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/config/auth.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/config/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/config/remote.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/hqdefault.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/maxresdefault.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/tpl/request.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/tpl/response.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test-main/new.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2QgcHZ0MViOBG0s3h4hkqqNKw2q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/program/IntelliJIDEA/Proect/allure_api_ui/src/test/java"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\program\IntelliJIDEA\Proect\allure_api_ui\src\test\java" />
+      <recent name="D:\program\IntelliJIDEA\Proect\allure_api_ui\src\test\resources" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f3384c6-2de6-4f44-9c5e-277d3b2534b7" name="Changes" comment="" />
+      <created>1685778580013</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685778580013</updated>
+    </task>
+    <servers />
+  </component>
+</project>
