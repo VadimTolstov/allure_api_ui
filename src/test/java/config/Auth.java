@@ -16,8 +16,6 @@ public class Auth {
         validateProperty(config.userNameAllure(), "userNameAllure");
         validateProperty(config.passwordAllure(), "passwordAllure");
         validateProperty(config.apiToken(), "apiToken");
-        validateProperty(config.userNameSelenoid(), "userNameSelenoid");
-        validateProperty(config.passwordSelenoid(), "passwordSelenoid");
         logger.info(config.toString());
     }
 

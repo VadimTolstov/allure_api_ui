@@ -25,6 +25,8 @@ public class Project {
                 break;
             case "remote":
                 Auth.validateProperty(config.remoteDriverUrl(), "remoteDriverUrl");
+                Auth.validateProperty(config.userNameSelenoid(), "userNameSelenoid");
+                Auth.validateProperty(config.passwordSelenoid(), "passwordSelenoid");
                 break;
             default:
                 throw new IllegalStateException("Неправильное значение в 'platform' " + config);
