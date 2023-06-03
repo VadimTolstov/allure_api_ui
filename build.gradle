@@ -109,12 +109,6 @@ task api_test(type: Test) {
     }
 }
 
-task android_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("ANDROID")
-    }
-}
-
 task regress_test(type: Test) {
     useJUnitPlatform {
         includeTags("REGRESS")
