@@ -90,13 +90,13 @@ gradle clean <tag>  -Dplatform=<platform>
 graph LR
 A[tag] --> B[api]
 A --> C[web]
-A --> D[Regress]
-B --> K[api+web_local]
-B --> L[api+web_selenoid]
+A --> D[regress]
+B --> K[api]
 C --> E[browser_selenoid]
 C --> F[browser_local]
 D --> G[api]
-D --> H[web]
+G --> N[api+web_local]
+G --> T[api+web_selenoid]
 ```
 
 [Вернуться к оглавлению ⬆](#Содержание)
