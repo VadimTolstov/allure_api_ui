@@ -22,6 +22,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 @DisplayName("Ui and Api tests Allure")
+@Epic("API")
+@Owner("толстов вадим")
 public class ApiAllureTests extends ApiTestBase {
 
     private String testCaseName,

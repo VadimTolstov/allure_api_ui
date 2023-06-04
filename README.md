@@ -100,13 +100,13 @@ D --> L[api+web_selenoid]
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
-## <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/dostavka.magnit.ru/)</a>
+## <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/allure_api_ui/)</a>
 Главная страница сборки:
 <p  align="center">
 <img src="images/screens/JenkinsMain.png" width="950">
 </p>
 
-Параметризованное задание Jenkins может быть запущено с необходимыми ***tag*** и ***runIn***:
+Параметризованное задание Jenkins может быть запущено с необходимыми ***tag*** и ***platform***:
 <p  align="center">
 <img src="images/screens/Jenkins.png" alt="JenkinsBuildParameters" width="950">
 </p>

@@ -13,8 +13,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
-@DisplayName("Ui tests Allure")
-@Epic("UI")
+@DisplayName("WEB tests Allure")
+@Epic("WEB")
 @Owner("толстов вадим")
 public class UiAllureTests extends UiTestBase {
 
