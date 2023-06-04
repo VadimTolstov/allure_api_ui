@@ -1,4 +1,4 @@
-<h2 align="center"> Проект по автоматизации тестирования сервиса Allure TestOps"</h2>
+<h2 align="center"> Проект по автоматизации тестирования сервиса "Allure TestOps"</h2>
 <p  align="center">
 <a href="https://qameta.io/"><img src="./images/icons/logo.png" width="950"></a>
 </p>
@@ -17,7 +17,7 @@
 
 
 # <a name="Описание">Описание</a>
-Тестовый проект состоит из веб-тестов (UI), тестов API и мобильных тестов (Android).\
+Тестовый проект состоит из веб-тестов (UI), тестов API + UI.\
 Краткий список интересных фактов о проекте:
 - [x] `Page Object` проектирование
 - [x] Параметризованные тесты
@@ -46,10 +46,7 @@
   <code><img width="5%" title="Jenkins" src="./images/icons/jenkins-logo.svg"></code>
   <code><img width="5%" title="Jira" src="./images/icons/jira-logo.svg"></code>
   <code><img width="5%" title="Telegram" src="./images/icons/Telegram.svg"></code>
-  <code><img width="5%" title="Browserstack" src="./images/icons/browserstack.svg"></code>
-  <code><img width="5%" title="Android Studio" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Android_Studio_Icon_3.6.svg"></code>
-  <code><img width="5%" title="Appium" src="./images/icons/appium.svg"></code>
-</p>
+ </p>
 
 Автотесты в этом проекте написаны на `Java` использую `Selenide` фреймворк.\
 `Gradle` - используется как инструмент автоматизации сборки.  \
@@ -57,8 +54,6 @@
 `REST Assured` - для тестирования REST-API сервисов.\
 `Jenkins` - CI/CD для запуска тестов удаленно.\
 `Selenoid` - для удаленного запуска браузера в `Docker` контейнерах.\
-`Browserstack` - для запуска мобильных тестов удаленно.\
-`Android Studio tools`, `Appium` - для запуска мобильных тестов локально на эмуляторе мобильных устройств.\
 `Allure Report` - для визуализации результатов тестирования.\
 `Telegram Bot` - для уведомлений о результатах тестирования.\
 `Allure TestOps` - как система управления тестированием.
@@ -70,41 +65,38 @@
 ## <a name="GradleCommand">Команды для Gradle</a>
 Для запуска локально и в Jenkins используется следующая команда::
 ```bash
-gradle clean test -Dtag=<tag> -DrunIn=<runIn>
+gradle clean <tag>  -Dplatform=<platform>
 ```
 Дополнительные параметры:
 > `-Dselenoid_user_sys_prop=enter_user` `-Dselenoid_key_sys_prop=enter_key` - данные для selenoid\
-> `-Dbrowserstack_user_sys_prop=enter_user` `-Dbrowserstack_key_sys_prop=enter_key` - данные для browserstack\
 > `-DapiBaseUrl=url` можно добавить для установки базового URL-адреса для тестов API.
 
 `tag` - теги для запуска выполнения тестов:
->- *API*
->- *Web*
->- *Android*
+>- *api*
+>- *web*
+>- *regress*
  
-`runIn` - определяет среду для запуска этих тестов:
->- *api* - for api tests
->- *browser_selenoid*
->- *browser_local*
->- *android_browserstack*
->- *android_emulator*
+`platform` - определяет среду для запуска этих тестов:
+>- *local* - для запуска тестов локально
+>- *remote* - для запуска тестов удаленно на selenoid
 
-Дополнительные свойства извлекаются из соответствующего файла конфигурации (в зависимости от значения `runIn`):
+Дополнительные свойства извлекаются из соответствующего файла конфигурации (в зависимости от значения `platform`):
 ```bash
-./resources/config/${runIn}.properties
+./resources/config/${platform}.properties
 ```
 
 Допустимые комбинации:
 ```mermaid
 graph LR
-A[tag] --> B[API]
-A --> C[Web]
-A --> D[Android]
-B --> K[api]
+A[tag] --> B[api]
+A --> C[web]
+A --> D[Regress]
+B --> K[api+web_local]
+B --> L[api+web_selenoid]
 C --> E[browser_selenoid]
 C --> F[browser_local]
-D --> G[android_browserstack]
-D --> H[android_emulator]
+D --> G[api]
+D --> H[web]
 ```
 
 [Вернуться к оглавлению ⬆](#Содержание)

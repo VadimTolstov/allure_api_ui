@@ -103,19 +103,19 @@ test {
     systemProperties(System.getProperties())
 }
 
-task api_test(type: Test) {
+task api(type: Test) {
     useJUnitPlatform {
         includeTags("APITEST")
     }
 }
 
-task regress_test(type: Test) {
+task regress(type: Test) {
     useJUnitPlatform {
         includeTags("REGRESS")
     }
 }
 
-task web_test(type: Test) {
+task web(type: Test) {
     useJUnitPlatform {
         includeTags("WEB")
     }
