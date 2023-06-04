@@ -10,7 +10,7 @@ public class Project {
 
     public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
 
-    private static final Logger logger = LoggerFactory.getLogger(Project.class);  // todo
+    private static final Logger logger = LoggerFactory.getLogger(Project.class);
 
     static {
         validateEnvDependentProperties();
