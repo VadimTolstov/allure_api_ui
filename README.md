@@ -94,9 +94,8 @@ A --> D[regress]
 B --> K[api]
 C --> E[browser_selenoid]
 C --> F[browser_local]
-D --> G[api]
-G --> N[api+web_local]
-G --> T[api+web_selenoid]
+D --> G[api+web_local]
+D --> G[api+web_selenoid]
 ```
 
 [Вернуться к оглавлению ⬆](#Содержание)
