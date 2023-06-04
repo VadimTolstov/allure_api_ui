@@ -211,7 +211,7 @@ E --> A
 # <a>Видео запуска тестов</a>
 
 <p align="center">
-  <img src="images/screens/video2.mp4" alt="JiraIntegration">
+  <img src="images/screens/video.gif" alt="JiraIntegration">
 </p>
 
 [Вернуться к оглавлению ⬆](#Содержание)
