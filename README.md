@@ -95,7 +95,7 @@ B --> K[api]
 C --> E[browser_selenoid]
 C --> F[browser_local]
 D --> G[api+web_local]
-D --> G[api+web_selenoid]
+D --> L[api+web_selenoid]
 ```
 
 [Вернуться к оглавлению ⬆](#Содержание)
