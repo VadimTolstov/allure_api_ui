@@ -161,7 +161,7 @@ Telegram-бот отправляет краткий отчет в указанн
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
-# <a>Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/24937)</a>
+# <a>Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/2993/dashboards)</a>
 > Ссылка доступна только авторизованным пользователям.
 
 Тест-кейсы в проекте импортируются и постоянно обновляются из кода,
@@ -172,6 +172,10 @@ Telegram-бот отправляет краткий отчет в указанн
 
 <p align="center">
   <img src="images/screens/AllureTestOpsDashboard.png" alt="AllureTestOpsTests" width="950">
+</p>
+
+<p align="center">
+  <img src="images/screens/AllureTestOpsDashboard2.png" alt="AllureTestOpsTests2" width="950">
 </p>
 
 ```mermaid
@@ -207,7 +211,7 @@ E --> A
 # <a>Видео запуска тестов</a>
 
 <p align="center">
-  <img src="images/screens/video.gif" alt="JiraIntegration">
+  <img src="images/screens/video2.mp4" alt="JiraIntegration">
 </p>
 
 [Вернуться к оглавлению ⬆](#Содержание)

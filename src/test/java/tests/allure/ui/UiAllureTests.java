@@ -79,7 +79,8 @@ public class UiAllureTests extends UiTestBase {
     @Test
     @Epic("WEB")
     @Owner("толстов вадим")
-   // @Severity(SeverityLevel.CRITICAL)
+
+    @Severity(SeverityLevel.CRITICAL)
     @Regress
     @Web
     @DisplayName("Добавляем шаги в test case")
