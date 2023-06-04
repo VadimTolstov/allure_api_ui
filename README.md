@@ -161,7 +161,7 @@ Telegram-бот отправляет краткий отчет в указанн
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
-# <a>Интеграция с [Allure TestOps](https://allure.autotests.cloud/project/1668/test-cases?treeId=3201)</a>
+# <a>Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/24937)</a>
 > Ссылка доступна только авторизованным пользователям.
 
 Тест-кейсы в проекте импортируются и постоянно обновляются из кода,
