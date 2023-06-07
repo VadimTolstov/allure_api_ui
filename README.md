@@ -68,7 +68,8 @@
 gradle clean <tag>  -Dplatform=<platform>
 ```
 Дополнительные параметры:
-> `-Dselenoid_user_sys_prop=enter_user` `-Dselenoid_key_sys_prop=enter_key` - данные для selenoid\
+> `-DbrowserWithVersion` - для передачи браузера и версии        
+> `-DbrowserSize` - для передачи разрешения     
 > `-DapiBaseUrl=url` можно добавить для установки базового URL-адреса для тестов API.
 
 `tag` - теги для запуска выполнения тестов:
