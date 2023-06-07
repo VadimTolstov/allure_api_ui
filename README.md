@@ -106,7 +106,7 @@ D --> L[api+web_selenoid]
 <img src="images/screens/JenkinsMain.png" width="950">
 </p>
 
-Параметризованное задание Jenkins может быть запущено с необходимыми ***tag*** и ***platform***:
+Параметризованное задание Jenkins может быть запущено с необходимыми параметрами:
 <p  align="center">
 <img src="images/screens/Jenkins.png" alt="JenkinsBuildParameters" width="950">
 </p>
