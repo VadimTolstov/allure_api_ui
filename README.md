@@ -60,6 +60,44 @@
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
+<a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
+<a id="cases-ui"></a>UI-кейсы:
+:heavy_check_mark: Авторизация на сайте</br>
+
+:heavy_check_mark: Создание проекта</br>
+
+:heavy_check_mark: Удаление проекта</br>
+
+:heavy_check_mark: Создание test case</br>
+
+:heavy_check_mark: Редактирование имяни test case</br>
+
+:heavy_check_mark: Добовление шагов в test case</br>
+
+:heavy_check_mark: Добовление tag в  test case</br>
+
+:heavy_check_mark: Добовление описания в test case</br>
+
+:heavy_check_mark: Добовление attachment в test case</br>
+
+<a id="cases-api"></a>API-кейсы:
+
+:heavy_check_mark: Авторизация пользователя</br>
+
+:heavy_check_mark: Создание test case</br>
+
+:heavy_check_mark: Редактирование имяни test case</br>
+
+:heavy_check_mark: Добовление шагов в test case</br>
+
+:heavy_check_mark: Добовление tag в  test case</br>
+
+:heavy_check_mark: Добовление описания в test case</br>
+
+:heavy_check_mark: Удаление test case</br>
+
+<a id="cases-mobile"></a>Mobile-кейсы:
+
 # <a name="Варианты запуска">Варианты запуска</a>
 
 ## <a name="GradleCommand">Команды для Gradle</a>
