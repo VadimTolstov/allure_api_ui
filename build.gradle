@@ -5,7 +5,8 @@ plugins {
 }
 def allureVersion = "2.21.0",
     slf4jVersion = "2.0.7",
-    restAssuredVersion = "5.3.0"
+    restAssuredVersion = "5.3.0",
+    selenideVersion = "6.13.0"
 
 group = 'org.example'
 group = 'vadim_tolsotv'
@@ -40,7 +41,7 @@ compileTestJava {
 dependencies {
     implementation "org.jetbrains:annotations:20.1.0"
     testImplementation(
-            "com.codeborne:selenide:6.13.0",
+            "com.codeborne:selenide:$selenideVersion",
             "org.assertj:assertj-core:3.24.2",
             "org.junit.jupiter:junit-jupiter:5.9.2",
             "io.appium:java-client:8.3.0",
@@ -54,16 +55,13 @@ dependencies {
             "com.fasterxml.jackson.core:jackson-core:2.13.1",
             "org.aeonbits.owner:owner:1.0.12",
             "org.aspectj:aspectjweaver:1.9.19",
-            "org.aeonbits.owner:owner:1.0.12",
             "io.rest-assured:rest-assured:$restAssuredVersion",
             "io.rest-assured:json-path:$restAssuredVersion",
             "io.rest-assured:json-schema-validator:$restAssuredVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "commons-io:commons-io:2.11.0"
-
     )
-    // testImplementation 'org.testng:testng:7.1.0'
 }
 
 tasks.withType(JavaCompile) {
@@ -72,7 +70,7 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(Test) {
     systemProperties(System.getProperties())
-    useJUnitPlatform{
+    useJUnitPlatform {
         if (System.getProperty("tag") != null && !System.getProperty("tag").isEmpty()) {
             includeTags System.getProperty("tag")
         }
@@ -120,9 +118,3 @@ task web(type: Test) {
         includeTags("WEB")
     }
 }
-//
-//task remote_test(type: Test) {
-//    useJUnitPlatform {
-//        includeTags("remote")
-//    }
-//}
