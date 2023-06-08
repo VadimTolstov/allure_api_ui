@@ -62,6 +62,7 @@
 
 <a name="ImplementedСhecks"><h2>:heavy_check_mark:  Реализованные проверки:</h2></a>
 <a id="cases-ui"></a>UI-кейсы:
+
 :heavy_check_mark: Авторизация на сайте</br>
 
 :heavy_check_mark: Создание проекта</br>
