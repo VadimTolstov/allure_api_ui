@@ -21,7 +21,7 @@ public class UiAllureTests extends UiTestBase {
     @BeforeEach
     @Epic("WEB")
     @Owner("толстов вадим")
-    @DisplayName("Создаем проект")
+    @DisplayName("Авторузуемя и создаем проект")
     public void createProject() {
         String newProject = dataGenerator.getRandomSentence(3);
 
