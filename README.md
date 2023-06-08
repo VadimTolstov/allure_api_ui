@@ -97,7 +97,6 @@
 
 :heavy_check_mark: Удаление test case</br>
 
-<a id="cases-mobile"></a>Mobile-кейсы:
 
 # <a name="Варианты запуска">Варианты запуска</a>
 
