@@ -14,7 +14,7 @@ public class LoginExtension implements BeforeEachCallback {
     private static final String ALLURE_TESTOPS_SESSION = "ALLURE_TESTOPS_SESSION";
 
     @Override
-    public void beforeEach(ExtensionContext context) throws Exception {
+    public void beforeEach(ExtensionContext context) {
         String cookies = AuthorizationApi.getAuthorizationCookie();
 
         open("/favicon.ico");

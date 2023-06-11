@@ -1,11 +1,11 @@
 package tests.allure.ui;
 
 import data.DataGenerator;
-import tests.TestBase;
 import pages.AuthorizationUi;
 import pages.ProjectPagesModal;
 import pages.ProjectsPagesModal;
 import pages.TestCasePagesModal;
+import tests.TestBase;
 
 public class UiTestBase extends TestBase {
     DataGenerator dataGenerator = new DataGenerator();

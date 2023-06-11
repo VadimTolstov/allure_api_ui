@@ -13,18 +13,18 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class Specs {
 
-   public static RequestSpecification request = with()
-           .filter(CustomAllureListener.withCustomTemplates())
-           .log().uri()
-           .log().body()
-           //.baseUri() todo .baseUri(Project.config.apiBaseUrl())
-           .contentType(ContentType.JSON)
-           .header("Authorization", "Bearer " + AuthorizationApi.getAuthorization().getAccessToken())
-           .basePath("api/rs/");
+    public static RequestSpecification request = with()
+            .filter(CustomAllureListener.withCustomTemplates())
+            .log().uri()
+            .log().body()
+            //.baseUri() todo .baseUri(Project.config.apiBaseUrl())
+            .contentType(ContentType.JSON)
+            .header("Authorization", "Bearer " + AuthorizationApi.getAuthorization().getAccessToken())
+            .basePath("api/rs/");
 
-   public static ResponseSpecification response = new ResponseSpecBuilder()
-           .log(LogDetail.ALL)
-           .expectBody(notNullValue())
-           .expectStatusCode(200)
-           .build();
+    public static ResponseSpecification response = new ResponseSpecBuilder()
+            .log(LogDetail.ALL)
+            .expectBody(notNullValue())
+            .expectStatusCode(200)
+            .build();
 }

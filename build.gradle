@@ -13,14 +13,14 @@ group = 'vadim_tolsotv'
 version = '1.0-SNAPSHOT'
 
 allure {
-    report { //секция репорта
+    report {
         version(allureVersion)
     }
-    adapter { //отвечает за появление папочки build/allure-results
-        aspectjWeaver.set(true)//Обработка аннотации @Step
+    adapter {
+        aspectjWeaver.set(true)
         frameworks {
-            junit5 { //название фреймворка
-                adapterVersion.set(allureVersion)//версия интеграции фреймворка и Allure
+            junit5 {
+                adapterVersion.set(allureVersion)
             }
         }
     }
@@ -92,13 +92,6 @@ tasks.withType(Test) {
             exceptionFormat "short"
         }
     }
-}
-
-test {
-    useJUnitPlatform()
-//    //Язык, на котором запуститься сайт
-//    // systemProperty "chromeoptions.prefs","int.accept_languages=en"
-    systemProperties(System.getProperties())
 }
 
 task api(type: Test) {

@@ -36,7 +36,7 @@ public class TestCasePagesModal {
             setUploadAttachmentsInput = $("input[type='file']"),
             verifyAddAttachmentInput = $(".AttachmentRow__name"),
             verifyStepTestCaseInput = $("[data-testid='section__scenario']"),
-            saveDataTestCaseInput =  $(byText("Submit"));
+            saveDataTestCaseInput = $(byText("Submit"));
 
     @Step("Открываем страницу проекта {projectId} с test case {testCaseId}")
     public TestCasePagesModal openPageTestCase(Long projectId, Long testCaseId) {
