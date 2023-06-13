@@ -1,4 +1,4 @@
-package api.pages.specs;
+package api.specs;
 
 import api.authorization.AuthorizationApi;
 import io.restassured.builder.RequestSpecBuilder;

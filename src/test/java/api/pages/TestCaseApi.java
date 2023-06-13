@@ -2,8 +2,8 @@ package api.pages;
 
 import api.endpoint.TestCaseEndPoint;
 import api.models.*;
-import api.models.specs.Specs;
-import api.pages.specs.BaseApi;
+import api.specs.Specs;
+import api.specs.BaseApi;
 import helpers.CustomAllureListener;
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
@@ -44,7 +44,7 @@ public class TestCaseApi extends BaseApi {
     }
 
     @Step("Редактируем имя test cases через Api")
-    public CreateTestCaseResponse createTestCaseResponse(CreateTestCaseBody body, Long PROJECT_ID, Long testCaseId) {
+    public EditNameTestCaseResponse EditNameTestCaseResponse(EditNameTestCaseBody body, Long PROJECT_ID, Long testCaseId) {
         return given(Specs.request)
                 .queryParam("projectId", PROJECT_ID)
                 .queryParam("leafId", testCaseId)
@@ -53,11 +53,11 @@ public class TestCaseApi extends BaseApi {
                 .post("testcasetree/leaf/rename")
                 .then()
                 .spec(Specs.response)
-                .extract().as(CreateTestCaseResponse.class);
+                .extract().as(EditNameTestCaseResponse.class);
     }
 
     @Step("Добавляем описания в test case через Api")
-    public TestCaseDataResponseDto descriptionTestCase(DescriptionTestCaseDto descriptionTestCaseDto, Long testCaseId) {
+    public TestCaseDataResponseDto addDescriptionToTestCase(DescriptionTestCaseDto descriptionTestCaseDto, Long testCaseId) {
         return given(Specs.request)
                 .body(descriptionTestCaseDto)
                 .when()
@@ -67,7 +67,7 @@ public class TestCaseApi extends BaseApi {
     }
 
     @Step("Обновляем шагов в test case через Api")
-    public TestCaseScenarioDto response(TestCaseScenarioDto scenarioDto, Long testCaseId) {
+    public TestCaseScenarioDto updatingStepTestCase(TestCaseScenarioDto scenarioDto, Long testCaseId) {
         return given(Specs.request)
                 .body(scenarioDto)
                 .when()
@@ -78,7 +78,7 @@ public class TestCaseApi extends BaseApi {
     }
 
     @Step("Добовляем comment в test case через Api")
-    public TestCaseCommentDto responseComment(TestCaseCommentDto requestComment) {
+    public TestCaseCommentDto addingCommentTestCase(TestCaseCommentDto requestComment) {
         return given(Specs.request)
                 .body(requestComment)
                 .when()

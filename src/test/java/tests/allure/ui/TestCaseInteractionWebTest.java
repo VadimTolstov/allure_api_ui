@@ -16,18 +16,16 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 @DisplayName("WEB tests Allure")
 @Epic("WEB")
 @Owner("толстов вадим")
-public class UiAllureTests extends UiTestBase {
+public class TestCaseInteractionWebTest extends UiTestBase {
 
     @BeforeEach
-    @Epic("WEB")
-    @Owner("толстов вадим")
     @DisplayName("Авторузуемя и создаем проект")
     public void createProject() {
         String newProject = dataGenerator.getRandomSentence(3);
 
         userAuthorization.authorizationUi();
 
-        projectsPagesModal
+        projectsModalPage
                 .verifyProjectsPages()
                 .openModalCreateNewProject()
                 .createProject(newProject);
@@ -36,8 +34,6 @@ public class UiAllureTests extends UiTestBase {
     }
 
     @AfterEach
-    @Epic("WEB")
-    @Owner("толстов вадим")
     @DisplayName("Удаляем проект")
     public void deleteProject() {
         projectPages.deleteProject();

@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class TestCasePagesModal {
+public class TestCaseDetailPage {
 
     private final String ALLURE_URL_PROJECT = "https://allure.autotests.cloud/project/";
 
@@ -39,71 +39,71 @@ public class TestCasePagesModal {
             saveDataTestCaseInput = $(byText("Submit"));
 
     @Step("Открываем страницу проекта {projectId} с test case {testCaseId}")
-    public TestCasePagesModal openPageTestCase(Long projectId, Long testCaseId) {
+    public TestCaseDetailPage openPageTestCase(Long projectId, Long testCaseId) {
         Selenide.open(ALLURE_URL_PROJECT + projectId + "/test-cases/" + testCaseId);
         return this;
     }
 
     @Step("Открываем страницу с test cases")
-    public TestCasePagesModal openTestCasesPages() {
+    public TestCaseDetailPage openTestCasesPages() {
         openTestCasesPagesInput.click();
         return this;
     }
 
     @Step("Создаем test case {name}")
-    public TestCasePagesModal createTestCase(String name) {
+    public TestCaseDetailPage createTestCase(String name) {
         createTestCaseInput.setValue(name).pressEnter();
         return this;
     }
 
     @Step("Открываем test case {nameTestCase}")
-    public TestCasePagesModal openTestCase(String nameTestCase) {
+    public TestCaseDetailPage openTestCase(String nameTestCase) {
         $(byText(nameTestCase)).click();
         return this;
     }
 
     @Step("Открываем step в test case")
-    public TestCasePagesModal openStepTestCase() {
+    public TestCaseDetailPage openStepTestCase() {
         openStepTestCaseInput.click();
         return this;
     }
 
     @Step("Добовляем step {step} в test case")
-    public TestCasePagesModal createStepTestCase(String step) {
+    public TestCaseDetailPage createStepTestCase(String step) {
         createStepTestCaseInput.setValue(step).pressEnter();
         return this;
     }
 
     @Step("Сохраняем данные в test case")
-    public TestCasePagesModal saveDataTestCase() {
+    public TestCaseDetailPage saveDataTestCase() {
         saveDataTestCaseInput.click();
         return this;
     }
 
     @Step("Добовляем description {description} в test case")
-    public TestCasePagesModal createDescriptionTestCase(String description) {
+    public TestCaseDetailPage createDescriptionTestCase(String description) {
         createDescriptionTestCaseInput.click();
         createDescriptionTestCase.setValue(description);
         return this;
     }
 
     @Step("Открываем tag в test case")
-    public TestCasePagesModal openTagTestCase() {
+    public TestCaseDetailPage openTagTestCase() {
         openTagTestCaseInput.click();
         return this;
     }
 
     @Step("Добовляем tag {tag} в test case")
-    public TestCasePagesModal createTagTestCase(String tag) {
+    public TestCaseDetailPage createTagTestCase(String tag) {
         createTagTestCase.sendKeys(tag);
-        $(byText("Create \"" + tag + "\"")).shouldHave(visible).click();
+        $(byText("Create \"" + tag + "\"")).click();
         return this;
     }
 
     @Step("Изменяем имя у test case")
-    public TestCasePagesModal renameTestCase(String newNameTestCase) {
+    public TestCaseDetailPage renameTestCase(String newNameTestCase) {
         leafStatusInout.hover();
-        openRenameTestCaseInput.shouldHave(visible).click();
+        openRenameTestCaseInput.click();
         clickFormRename.click();
         renameTestCaseInput.setValue(newNameTestCase);
         saveRenameTestCaseInput.click();
@@ -112,63 +112,63 @@ public class TestCasePagesModal {
     }
 
     @Step("Открываем вкладку attachments")
-    public TestCasePagesModal openAttachmentTestCase() {
+    public TestCaseDetailPage openAttachmentTestCase() {
         openAttachmentTestCaseInput.click();
         return this;
     }
 
     @Step("Загружаем файл {filePath}")
-    public TestCasePagesModal setUploadAttachments(String filePath) {
+    public TestCaseDetailPage setUploadAttachments(String filePath) {
         setUploadAttachmentsInput.uploadFromClasspath(filePath);
         return this;
     }
 
     @Step("Проверяем, что attachment {attachment} добавлен")
-    public TestCasePagesModal verifyAddAttachment(String attachment) {
+    public TestCaseDetailPage verifyAddAttachment(String attachment) {
         verifyAddAttachmentInput.shouldHave(text(attachment)).shouldHave(visible);
         return this;
     }
 
     @Step("Проверяем, что у test case {name}{newName} изменилось имя")
-    public TestCasePagesModal verifyNewNameTestCase(String name, String newName) {
+    public TestCaseDetailPage verifyNewNameTestCase(String name, String newName) {
         testCaseInput.shouldHave(text(name + newName)).shouldHave(visible);
         return this;
     }
 
 
     @Step("Проверяем имя {testCaseName} у test case")
-    public TestCasePagesModal verifyNameTestCase(String testCaseName) {
+    public TestCaseDetailPage verifyNameTestCase(String testCaseName) {
         testCaseInput.shouldHave(text(testCaseName)).shouldHave(visible);
         return this;
     }
 
     @Step("Проверяем описание у test case")
-    public TestCasePagesModal verifyDescriptionTestCase(String testCaseDescription) {
+    public TestCaseDetailPage verifyDescriptionTestCase(String testCaseDescription) {
         testCaseDescriptionInput.shouldHave(text(testCaseDescription)).shouldHave(visible);
         return this;
     }
 
     @Step("Проверяем, что tag {tagName} добавлен в test case")
-    public TestCasePagesModal verifyTagTestCase(String tagName) {
+    public TestCaseDetailPage verifyTagTestCase(String tagName) {
         testCaseTagInput.shouldHave(text(tagName)).shouldHave(visible);
         return this;
     }
 
     @Step("Проверяем, что коментарий {comment} добавлен к test case")
-    public TestCasePagesModal verifyCommentTestCase(String comment) {
+    public TestCaseDetailPage verifyCommentTestCase(String comment) {
         testCaseCommentInput.shouldHave(text(comment)).shouldHave(visible);
         return this;
     }
 
     @Step("Проверяем, что test case {nameTestCase} создался")
-    public TestCasePagesModal verifyTestCaseName(String nameTestCase) {
+    public TestCaseDetailPage verifyTestCaseName(String nameTestCase) {
         $(byText(nameTestCase)).click();
         testCaseInput.shouldHave(text(nameTestCase)).shouldHave(visible);
         return this;
     }
 
     @Step("Проверяем, что step {step} добавлен в test case")
-    public TestCasePagesModal verifyStepTestCase(String step) {
+    public TestCaseDetailPage verifyStepTestCase(String step) {
         verifyStepTestCaseInput.shouldHave(text(step)).shouldHave(visible);
         return this;
     }

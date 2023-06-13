@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class ProjectsPagesModal {
+public class ProjectsModalPage {
 
     private final SelenideElement verifyProjectsPagesInput = $(".BreadCrumbs "),
             openModalCreateNewProjectInput = $(byText("Create new project")),
@@ -16,13 +16,13 @@ public class ProjectsPagesModal {
             saveProject = $("[name=submit]");
 
     @Step("Проверяем, что открыта страница с проектами")
-    public ProjectsPagesModal verifyProjectsPages() {
+    public ProjectsModalPage verifyProjectsPages() {
         verifyProjectsPagesInput.shouldHave(visible).shouldHave(text("Projects"));
         return this;
     }
 
     @Step("Открываем модальное окно создание проекта")
-    public ProjectsPagesModal openModalCreateNewProject() {
+    public ProjectsModalPage openModalCreateNewProject() {
         openModalCreateNewProjectInput.click();
         return this;
     }

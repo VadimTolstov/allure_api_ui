@@ -16,16 +16,11 @@ public class TestBase {
 
     @BeforeAll
     static void setUp() {
-        selectDriver();
-    }
-
-    private static void selectDriver() {
-        switch (Project.config.platform()) {
-            case "local":
-            case "remote":
-                WebDriverProvider.configure();
-                break;
-        }
+        String platform = Project.config.platform();
+        if ("local".equals(platform) || "remote".equals(platform))
+            WebDriverProvider.configure();
+        else
+            throw new RuntimeException("Platform " + platform + " not supported");
     }
 
     @BeforeEach

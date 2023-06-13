@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class ProjectPagesModal {
+public class ProjectDetailPage {
 
     private final SelenideElement openDeleteProjectPagesInput = $("[aria-label=Settings]"),
             openDeleteProjectInput = $(byText("Delete project")),
@@ -17,7 +17,7 @@ public class ProjectPagesModal {
 
 
     @Step("Проверяем, что проект {projectName} создан")
-    public ProjectPagesModal verifyNewProject(String projectName) {
+    public ProjectDetailPage verifyNewProject(String projectName) {
         $("[title='" + projectName + "']").shouldHave(visible).shouldHave(text(projectName));
         return this;
     }

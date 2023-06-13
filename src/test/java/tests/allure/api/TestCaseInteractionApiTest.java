@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DisplayName("Ui and Api tests Allure")
 @Epic("API")
 @Owner("толстов вадим")
-public class ApiAllureTests extends ApiTestBase {
+public class TestCaseInteractionApiTest extends ApiTestBase {
 
     private String testCaseName,
             testCaseDescription;
@@ -35,9 +35,6 @@ public class ApiAllureTests extends ApiTestBase {
     private final Long PROJECT_ID = 2237L;
 
     @BeforeEach
-    @Epic("API")
-    @Owner("толстов вадим")
-    @DisplayName("Создаем test case")
     public void createTestCase() {
         testCaseName = dataGenerator.getRandomSentence(2);
         testCaseDescription = dataGenerator.getRandomSentence(3);
@@ -79,10 +76,10 @@ public class ApiAllureTests extends ApiTestBase {
         });
 
         step("Изменяем имя test case через api", () -> {
-            CreateTestCaseBody body = new CreateTestCaseBody();
+            EditNameTestCaseBody body = new EditNameTestCaseBody();
             body.setName(testCaseNewName);
 
-            CreateTestCaseResponse testCaseResponse = testCaseApi.createTestCaseResponse(body, PROJECT_ID, testCaseId);
+            EditNameTestCaseResponse testCaseResponse = testCaseApi.EditNameTestCaseResponse(body, PROJECT_ID, testCaseId);
 
             apiVerify.verifyChangingNameTestCase(testCaseResponse, body);
         });
@@ -113,7 +110,7 @@ public class ApiAllureTests extends ApiTestBase {
         descriptionTestCaseDto.setId(testCaseId);
 
         step("Добавляем описание в test case через api", () -> {
-            TestCaseDataResponseDto testCaseDataResponseDto = testCaseApi.descriptionTestCase(descriptionTestCaseDto, testCaseId);
+            TestCaseDataResponseDto testCaseDataResponseDto = testCaseApi.addDescriptionToTestCase(descriptionTestCaseDto, testCaseId);
 
             apiVerify.verifyDescriptionTestCase(testCaseDataResponseDto, descriptionTestCaseDto);
         });
@@ -176,7 +173,7 @@ public class ApiAllureTests extends ApiTestBase {
         requestComment.setTestCaseId(testCaseId);
 
         step("Добавляем коментарий в test case в через api", () -> {
-            TestCaseCommentDto responseComment = testCaseApi.responseComment(requestComment);
+            TestCaseCommentDto responseComment = testCaseApi.addingCommentTestCase(requestComment);
 
             assertEquals(comment, responseComment.getBody());
         });
@@ -205,9 +202,9 @@ public class ApiAllureTests extends ApiTestBase {
                 .addStep(new TestCaseScenarioDto.Step(step3));
 
         step("Добавляем шаги в test case через api", () -> {
-            TestCaseScenarioDto responseTestCaseScenario = testCaseApi.response(scenarioDto, testCaseId);
+            TestCaseScenarioDto responseTestCaseScenario = testCaseApi.updatingStepTestCase(scenarioDto, testCaseId);
 
-            apiVerify.verifyStepTagTestCase(step1, step2, step3, responseTestCaseScenario);
+            apiVerify.verifyStepTagTestCase(scenarioDto.getSteps(), responseTestCaseScenario);
         });
 
         step("Проверяем через ui, что шаги в test case добавлены ", () -> {

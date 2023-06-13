@@ -7,7 +7,7 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class AuthorizationUi {
+public class LoginPage {
 
     private final SelenideElement userNameInput = $("[name='username']"),
             passwordInput = $("[name='password']");

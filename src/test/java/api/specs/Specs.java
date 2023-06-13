@@ -1,4 +1,4 @@
-package api.models.specs;
+package api.specs;
 
 import api.authorization.AuthorizationApi;
 import helpers.CustomAllureListener;

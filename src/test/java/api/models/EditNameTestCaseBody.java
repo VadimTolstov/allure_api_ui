@@ -5,6 +5,6 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CreateTestCaseBody {
+public class EditNameTestCaseBody {
     String name;
 }

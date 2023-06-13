@@ -3,7 +3,7 @@ package api.models;
 import lombok.Data;
 
 @Data
-public class CreateTestCaseResponse {
+public class EditNameTestCaseResponse {
 
     private Long id;
     private String name, statusName, statusColor;
