@@ -1,4 +1,4 @@
-package api.pages;
+package api.requests;
 
 import api.endpoint.TestCaseEndPoint;
 import api.models.*;

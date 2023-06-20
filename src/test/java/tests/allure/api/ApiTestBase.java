@@ -1,6 +1,6 @@
 package tests.allure.api;
 
-import api.pages.ApiVerify;
+import api.requests.ApiVerify;
 import data.DataGenerator;
 import pages.TestCaseDetailPage;
 import tests.TestBase;

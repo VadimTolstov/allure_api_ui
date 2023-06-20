@@ -139,7 +139,7 @@ D --> L[api+web_selenoid]
 
 [Вернуться к оглавлению ⬆](#Содержание)
 
-## <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/allure_api_ui/)</a>
+## <a name="Запуск в Jenkins">Запуск в [Jenkins](https://jenkins.autotests.cloud/job/Students/job/allure_api_ui/)</a>
 Главная страница сборки:
 <p  align="center">
 <img src="images/screens/JenkinsMain.png" width="950">

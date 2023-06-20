@@ -1,7 +1,7 @@
 package tests.allure.api;
 
 import api.models.*;
-import api.pages.TestCaseApi;
+import api.requests.TestCaseApi;
 import helpers.ApiTest;
 import helpers.Regress;
 import helpers.WithLogin;
